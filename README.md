@@ -1,1 +1,20 @@
 # blog
+To list blog entries:
+curl -i http://soy-ascent-175013.appspot.com/blog/entries
+
+To list a specific entry (for example the third entry):
+curl -i http://soy-ascent-175013.appspot.com/blog/entries/3
+
+To create a new blog entry:
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Stranger Things", "description":"Stranger Things is coming back this Halloween. SO excited!"}' http://soy-ascent-175013.appspot.com/blog/entries
+
+To update an existing blog entry (for example the first entry):
+curl -i -H "Content-Type: application/json" -X PUT -d '{"title":"Charleston Weather"}' http://soy-ascent-175013.appspot.com/blog/entries/1
+
+To delete a blog entry (for example the second entry):
+curl -i -X DELETE http://soy-ascent-175013.appspot.com/blog/entries/2
+
+
+
+***NOTE: I used https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask to design this web service using flask***
+
